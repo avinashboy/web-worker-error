@@ -1,0 +1,453 @@
+html {
+  --background-color: #e5ddd5;
+  --text_color: #303030;
+  --color-hover: rgba(246, 146, 77, 0.6);
+  --text-hover: #ebebeb;
+  --svg-color: #ffffff;
+  --chevron: #ffffff;
+  --svg-bg: #303030;
+  --box-color: rgba(246, 146, 77, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-two: "Roboto", sans-serif;
+  --font-three: "Oswald", sans-serif;
+  --font-four: "Nunito", sans-serif;
+}
+
+/* color #E1E2E3 #939597 #B1B3B5 #828689 */
+/* bg #1E2428  #33383B*/
+html[data-theme="Dark"] {
+  --background-color: #0d1418;
+  --text_color: #e1e2e3;
+  --color-hover: rgba(48, 48, 48, 0.5);
+  --text-hover: #ebebeb;
+  --svg-color: #ffffff;
+  --chevron: #000000;
+  --svg-bg: #6e7377;
+  --box-color: rgba(246, 146, 77, 0.5);
+}
+
+/* html[data-theme="Dark"] {
+  --background-color: #0d1418;
+  --text_color: #f1f1f2;
+  --color-hover: rgba(42, 47, 50, 1);
+  --text-hover: #ebebeb;
+  --svg-color: #ffffff;
+  --svg-bg: #6e7377;
+  --box-color: rgba(246, 146, 77, 0.5);
+} */
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+.svg-color {
+  color: var(--svg-color);
+}
+
+.svg-bg {
+  color: var(--svg-bg);
+}
+
+body {
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+.mainMedia {
+  width: 80%;
+  margin: 20px auto;
+  margin-bottom: 1rem;
+}
+
+.mainContent {
+  margin-bottom: 1rem;
+  /* box-sizing: border-box; */
+}
+
+.mainText {
+  margin-bottom: 15px;
+}
+
+.mainText > .innerText {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--font-two);
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  color: var(--text_color);
+}
+
+.xMiniMedia {
+  position: relative;
+  z-index: 2;
+  /* border-style: solid; */
+}
+
+.miniMedia {
+  left: 0;
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.spotifyMiniMedia {
+  left: 0;
+  width: 100%;
+  height: 232px;
+  position: relative;
+  overflow: hidden;
+}
+
+.centerText {
+  color: var(--text_color);
+  font-family: var(--font-two);
+  font-size: 2rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 4px;
+  padding-bottom: 15px;
+}
+
+.collect_mail {
+  border-radius: 5px;
+  margin: 15px auto;
+  width: 80%;
+  background-color: var(--background-color);
+  border: 2px solid var(--text_color);
+}
+
+/* .collect_mail:hover {
+  box-shadow: rgb(0 0 0 / 15%) 0px 10px 30px 0px;
+  box-shadow: 0 2rem 2rem rgb(0 0 0 / 16%);
+  border: 1px solid var(--text_color);
+} */
+
+.addMailCollectTwo {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.addMailCollectOne {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding: 17px 14px;
+}
+
+.mail {
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+}
+
+.mailName:focus {
+  outline: none;
+}
+
+.mailName {
+  flex: 1;
+  border: 2px solid var(--text_color);
+  background: transparent;
+  padding: 11px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--text_color);
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  font-family: var(--font-two);
+  font-weight: 400;
+}
+
+.btnMail {
+  background-color: var(--text_color);
+  border-radius: 5px;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.btnMail > i {
+  color: var(--chevron);
+}
+
+.inside_form {
+  padding: 19px 0;
+}
+
+.text_inside_form {
+  font-size: 16px;
+  line-height: 1.3em;
+  margin-bottom: 11px;
+}
+
+.spanText {
+  font-family: var(--font-two) !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem;
+  color: var(--text_color);
+}
+
+.background_image {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.image_fixed {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+
+.wantShadowTwo {
+  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 30%);
+}
+
+.wantShadow {
+  box-shadow: rgb(0 0 0 / 40%) 0px 4px 20px 0px;
+}
+
+.wantBorder {
+  border: 2px solid var(--color-hover);
+}
+
+.addFlex {
+  display: flex;
+}
+
+.addSpace {
+  margin-top: 2rem;
+}
+
+.addSpace2 {
+  margin-top: 5rem;
+}
+
+.mainShow {
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 0px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.profileImage > .imageClass > svg,
+.profileImage > .imageClass > img {
+  height: 98px;
+  width: 98px;
+  display: block;
+  object-fit: contain;
+  object-position: initial;
+  border-radius: 50%;
+  color: var(--text_color);
+}
+
+.forText {
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  white-space: normal;
+}
+
+.addLittleBit {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.box {
+  margin: 0px auto;
+  height: 100%;
+  width: 100%;
+  max-width: 690px;
+  padding-bottom: 84px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.profileCenter {
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 12px;
+  margin-bottom: 22px;
+  width: 100%;
+  height: 100%;
+}
+
+.profileCenter > div,
+.profileInfo > div {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.profileName {
+  font-family: var(--font-three);
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--text_color);
+}
+
+.profileSocial {
+  width: 70%;
+  margin-top: 0.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.profileSocial > span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.profileSocial > span > a > i {
+  font-size: 31px;
+  color: var(--text_color);
+}
+
+.profileHeader {
+  color: var(--text_color);
+}
+
+.profileHeader > h3 {
+  font-family: var(--font-four);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.profileDescription {
+  color: var(--text_color);
+}
+
+.profileDescription > .profileText {
+  font-family: var(--font-two);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.hides {
+  display: none;
+}
+
+ul > li {
+  background: transparent;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--text_color);
+  width: 80%;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 1px;
+  color: var(--text_color);
+}
+
+ul > li > a {
+  text-decoration: none;
+  font-size: 25px;
+  color: inherit;
+  font-family: var(--font-two);
+  font-weight: 400;
+}
+
+ul > li:hover {
+  background: var(--color-hover);
+  border: 1px solid var(--color-hover);
+  color: var(--text_color);
+  box-shadow: 0 2rem 2rem rgb(0 0 0 / 16%);
+}
+
+ul {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainFooter {
+  text-align: center;
+}
+
+.mainFooter > .footer > p {
+  font-family: var(--font-two);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text_color);
+}
+
+.footer {
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+.linksClass {
+  justify-content: space-between;
+}
+
+.linksClass .icons i {
+  width: 25px;
+  height: 25px;
+}
+
+.linksClass .icons img {
+  width: 25px;
+  height: 25px;
+}
+.linksClass > div {
+  min-width: 10%;
+}
+
+.linksClass .linkText {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.linkCurrent {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 512px) {
+  .linkCurrent {
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .spotifyMiniMedia {
+    height: 172px;
+  }
+}
